@@ -4,6 +4,6 @@ class Poem
   def initialize(details)
     @title = details[:title]
     @author = details[:author]
-    @content = details[:content]
+    @content = details[:lines].join(' / ')
   end
 end
