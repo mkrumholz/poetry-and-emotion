@@ -5,16 +5,16 @@ RSpec.describe PoetryDbService do
     it 'returns a list of poems by authors matching a search' do
       search = 'Emily'
 
-      response_body = File.read('./spec/fixtures/poems_by_emily.json')
+      # response_body = File.read('./spec/fixtures/poems_by_emily.json')
 
-      stub_request(:get, "https://poetrydb.org/author/#{search}").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v1.5.1'
-           }).
-         to_return(status: 200, body: response_body, headers: {})
+      # stub_request(:get, "https://poetrydb.org/author/#{search}").
+      #    with(
+      #      headers: {
+      #     'Accept'=>'*/*',
+      #     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+      #     'User-Agent'=>'Faraday v1.5.1'
+      #      }).
+      #    to_return(status: 200, body: response_body, headers: {})
 
       response = PoetryDbService.poems_by('Emily')
 

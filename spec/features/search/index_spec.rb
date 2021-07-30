@@ -11,5 +11,6 @@ RSpec.describe 'Search result index' do
     expect(page).to have_content "Not at Home to Callers"
     expect(page).to have_content "Emily Dickinson"
     expect(page).to have_content "Not at Home to Callers / Says the Naked Tree -- / Bonnet due in April -- / Wishing you Good Day --"
+    expect(page).to have_content "Tone name(s): Joy"
   end
 end
