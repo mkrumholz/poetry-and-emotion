@@ -15,6 +15,7 @@ RSpec.describe PoetryDbFacade do
       expect(first_poem.title).to eq "Not at Home to Callers"
       expect(first_poem.author).to eq 'Emily Dickinson' 
       expect(first_poem.content).to eq "Not at Home to Callers / Says the Naked Tree -- / Bonnet due in April -- / Wishing you Good Day --"
+      expect(first_poem.tone).to eq "Joy"
     end
   end
 end
